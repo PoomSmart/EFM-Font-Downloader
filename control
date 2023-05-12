@@ -1,0 +1,11 @@
+Package: com.ps.efmfontdl
+Name: EFM Font Downloader
+Depends: wget, curl
+Description: Shell script to download emoji font for EFM.
+Maintainer: PoomSmart
+Author: PoomSmart
+Section: Fonts (EFM)
+Version: 1.0.4-1
+Depiction: https://poomsmart.github.io/repo/depictions/efmfontdl.html
+SileoDepiction: https://poomsmart.github.io/repo/sileodepictions/efmfontdl.json
+Architecture: iphoneos-arm
