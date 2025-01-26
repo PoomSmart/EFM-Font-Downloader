@@ -4,7 +4,7 @@ A script to download [EmojiFontManager](https://github.com/PoomSmart/EmojiFontMa
 
 ## Important Notes
 
-- The device must support TLS 1.2 authentication (minimum support for downloading files off of GitHub). This translates into support OpenSSL 1.0.1 or newer.
+- The device must support TLS 1.2 authentication (minimum support for downloading files off of GitHub). This translates into supporting OpenSSL 1.0.1 or newer.
 - If `wget` is used and the device is jailbroken with XinaA15 (a.k.a deprecated and abandoned jailbreak), `.wgetrc` must be correctly configured. You may run this command once to configure it correctly: `echo "ca_certificate = /var/jb/etc/ssl/cert.pem" >> /var/mobile/.wgetrc && ln -s /var/mobile/.wgetrc /var/root/.wgetrc`
 
 # Usage

@@ -29,8 +29,13 @@ FONT_PATH=/Library/Themes/EmojiFontManager
 if [ ! -w $FONT_PATH ]; then
     FONT_PATH=/var/jb/Library/Themes/EmojiFontManager
     if [ ! -w $FONT_PATH ]; then
-        echo "Error: Could not find a writable directory to download the font to."
-        exit 1
+        if command -v jbroot &> /dev/null; then
+            FONT_PATH=$(jbroot)Library/Themes/EmojiFontManager
+        fi
+        if [ ! -w $FONT_PATH ]; then
+            echo "Error: Could not find a writable directory to download the font to."
+            exit 1
+        fi
     fi
 fi
 
