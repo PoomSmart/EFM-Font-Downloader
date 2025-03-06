@@ -47,7 +47,7 @@ download_file() {
     if [ "$DOWNLOAD_RESULT" -ne 0 ]; then
         DOWNLOAD_RESULT=0
         echo "Using curl instead of wget..."
-        curl -L -o "${FONT_PATH}/$INSTALL_NAME.font/${OUTPUT_FILENAME}" "$URL" || DOWNLOAD_RESULT=$?
+        curl --fail -L -o "${FONT_PATH}/$INSTALL_NAME.font/${OUTPUT_FILENAME}" "$URL" || DOWNLOAD_RESULT=$?
     fi
 }
 

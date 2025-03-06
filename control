@@ -5,7 +5,7 @@ Description: Shell script to download emoji font for EFM.
 Maintainer: PoomSmart
 Author: PoomSmart
 Section: Fonts (EFM)
-Version: 1.0.4-2
+Version: 1.0.5
 Depiction: https://poomsmart.github.io/repo/depictions/efmfontdl.html
 SileoDepiction: https://poomsmart.github.io/repo/sileodepictions/efmfontdl.json
 Architecture: iphoneos-arm
