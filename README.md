@@ -9,7 +9,7 @@ A script to download [EmojiFontManager](https://github.com/PoomSmart/EmojiFontMa
 
 ## Known issues
 
-On iOS 11 Electra jailbreak, the script will fail to download the files from GitHub Releases due to failure to verify GitHub's certificate. The current workaround is to use the insecure counterpart of this package: `EFM Font Downloader (Insecure)`. This one skips the certificate verification step and downloads the files directly.
+On iOS 11 Electra jailbreak, the script will fail to download the files from GitHub Releases due to failure to verify GitHub's certificate. The reason is that the jailbreak bootstrap has long been outdated and no longer maintained. The current workaround is to use the insecure counterpart of this package: `EFM Font Downloader (Insecure)`. This one skips the certificate verification step and downloads the files directly.
 
 # Usage
 
