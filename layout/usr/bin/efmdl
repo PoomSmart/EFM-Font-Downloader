@@ -26,20 +26,20 @@ URL="https://github.com/PoomSmart/EmojiFonts/releases/download/$VERSION/$NAME.tt
 OUTPUT_FILENAME="AppleColorEmoji@2x.ttc"
 FONT_PATH=/Library/Themes/EmojiFontManager
 
-if [ ! -w $FONT_PATH ]; then
+if [ ! -w "$FONT_PATH" ]; then
     FONT_PATH=/var/jb/Library/Themes/EmojiFontManager
-    if [ ! -w $FONT_PATH ]; then
+    if [ ! -w "$FONT_PATH" ]; then
         if command -v jbroot &> /dev/null; then
             FONT_PATH=$(jbroot)Library/Themes/EmojiFontManager
         fi
-        if [ ! -w $FONT_PATH ]; then
+        if [ ! -w "$FONT_PATH" ]; then
             echo "Error: Could not find a writable directory to download the font to."
             exit 1
         fi
     fi
 fi
 
-mkdir -p $FONT_PATH/$INSTALL_NAME.font
+mkdir -p "$FONT_PATH/$INSTALL_NAME.font"
 
 download_file() {
     DOWNLOAD_RESULT=0
@@ -56,6 +56,7 @@ download_file
 if [ "$DOWNLOAD_RESULT" -eq 0 ]; then
     echo "File successfully downloaded."
 else
+    rm -f "${FONT_PATH}/$INSTALL_NAME.font/${OUTPUT_FILENAME}"
     echo "Error: Download failed. Please check if the URL is correct, there is enough disk space, or try again later."
     exit 1
 fi
